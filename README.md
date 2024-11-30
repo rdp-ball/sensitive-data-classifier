@@ -66,61 +66,34 @@ The results are stored in a database, and a web interface is provided to upload 
 
 ---
 
-## Setup and Installation
+🌐 Endpoints
+EndpointMethodDescription/data/delete/entity/{id}DELETEDelete a file entity by ID/data/filesGETRetrieve all scanned files/upload/filePOSTUpload a new file
+🧪 Testing
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/sensitive-data-classifier-backend.git
-   cd sensitive-data-classifier-backend
- ### Build the Project
-   Run the following command to build the project:
-   ```bash
-   mvn clean install
-### Run the Application
-You can start the application using one of the following commands:
+Use Postman or any REST client to interact with endpoints
+Console logs provide runtime and error information
 
-### Using Maven
-```bash
-mvn spring-boot:run
-or 
-java -jar target/assignment-0.0.1-SNAPSHOT.jar
+🐳 Deployment
+Containerization
 
-Testing the Endpoints
-Use Postman or any REST client to test the following endpoints:
+Dockerfile and docker-compose.yml provided for containerization
 
-Delete File Entity
+Supported Platforms
 
-Endpoint: DELETE /data/delete/entity/{id}
-Description: Deletes a file entity with the specified ID.
-Get All Files
+Render
+Railway
+Koyeb
 
-Endpoint: GET /data/files
-Description: Retrieves a list of all scanned files.
-Upload File
-
-Endpoint: POST /upload/file
-Description: Handles the uploading of files.
-
-
-
-Classes Overview
+📦 Components
 DataController
-Dependencies: DataService
-Key Methods:
-deleteFile(int id)
-getFiles()
-FileController
-Dependencies: FileUploadService
-Key Methods:
-uploadFile(FileUploadRequest fileUploadRequest)
-Testing and Logs
-Use Postman or any REST client to test the endpoints.
-Check the console logs for runtime information and error details, if any.
-Deployment
-This application is prepared for deployment with the following tools:
 
-Docker: A Dockerfile and docker-compose.yml are provided to containerize the application.
-Platforms: The application can be deployed on platforms like Render, Railway, or Koyeb.
+Manages file data operations
+Methods: deleteFile(), getFiles()
+
+FileController
+
+Handles file upload processes
+Method: uploadFile()
 
 
   
