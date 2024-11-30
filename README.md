@@ -82,4 +82,52 @@ The results are stored in a database, with a web interface provided to upload fi
 ### Build the Project
 ```bash
    mvn clean install
+```
+## Run the Application
+```
+# Using Maven
+mvn spring-boot:run
+
+# Or using Java JAR
+java -jar target/assignment-0.0.1-SNAPSHOT.jar
+```
+## 🧪 Testing
+
+### Endpoint Testing
+
+Use Postman or any REST client to test the following endpoints:
+
+| Endpoint | Method | URL | Description |
+|----------|--------|-----|-------------|
+| Delete File Entity | `DELETE` | `/data/delete/entity/{id}` | Deletes a file entity with the specified ID |
+| Get All Files | `GET` | `/data/files` | Retrieves a list of all scanned files |
+| Upload File | `POST` | `/upload/file` | Handles the uploading of files |
+
+### Logging
+- Monitor console logs for:
+  - Runtime information
+  - Error details
+  - Execution status
+
+### Test Scenarios
+- Validate file upload functionality
+- Test sensitive data identification
+- Verify data classification accuracy
+- Check endpoint response codes
+- Ensure proper error handling
+
+### Tools Recommended
+- **Postman**: For API endpoint testing
+- **Swagger**: API documentation and testing
+- **JUnit**: For unit testing
+- **Mockito**: For mocking dependencies
+
+### Best Practices
+- Use valid test files
+- Test edge cases
+- Validate file size limits
+- Check different file types
+- Verify data privacy and security measures
+
+
 
