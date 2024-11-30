@@ -72,3 +72,55 @@ The results are stored in a database, and a web interface is provided to upload 
    ```bash
    git clone https://github.com/yourusername/sensitive-data-classifier-backend.git
    cd sensitive-data-classifier-backend
+ ### Build the Project
+   Run the following command to build the project:
+   ```bash
+   mvn clean install
+### Run the Application
+You can start the application using one of the following commands:
+
+### Using Maven
+```bash
+mvn spring-boot:run
+or 
+java -jar target/assignment-0.0.1-SNAPSHOT.jar
+
+Testing the Endpoints
+Use Postman or any REST client to test the following endpoints:
+
+Delete File Entity
+
+Endpoint: DELETE /data/delete/entity/{id}
+Description: Deletes a file entity with the specified ID.
+Get All Files
+
+Endpoint: GET /data/files
+Description: Retrieves a list of all scanned files.
+Upload File
+
+Endpoint: POST /upload/file
+Description: Handles the uploading of files.
+
+
+
+Classes Overview
+DataController
+Dependencies: DataService
+Key Methods:
+deleteFile(int id)
+getFiles()
+FileController
+Dependencies: FileUploadService
+Key Methods:
+uploadFile(FileUploadRequest fileUploadRequest)
+Testing and Logs
+Use Postman or any REST client to test the endpoints.
+Check the console logs for runtime information and error details, if any.
+Deployment
+This application is prepared for deployment with the following tools:
+
+Docker: A Dockerfile and docker-compose.yml are provided to containerize the application.
+Platforms: The application can be deployed on platforms like Render, Railway, or Koyeb.
+
+
+  
